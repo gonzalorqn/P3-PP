@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "d8a9ed83-8f77-48a5-a419-437d40fdefaf",
+		"name": "PARCIALES",
+		"description": "parciales programacion y laboratorio 3, año 2019, segundo cuatrimestre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1PARCIAL_PROG3",
+			"item": [
+				{
+					"name": "ALTA UFOLOGO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pais",
+									"value": "Paraguay",
+									"type": "text"
+								},
+								{
+									"key": "legajo",
+									"value": "113",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "21234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/GALVAN_DIEGO/AltaUfologo.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"GALVAN_DIEGO",
+								"AltaUfologo.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VERIFICAR UFOLOGO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "legajo",
+									"value": "112",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/GALVAN_DIEGO/VerificarUfologo.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"GALVAN_DIEGO",
+								"VerificarUfologo.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MOSTRAR COOKIE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost/GALVAN_DIEGO/MostrarCookie.php?legajo=112",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"GALVAN_DIEGO",
+								"MostrarCookie.php"
+							],
+							"query": [
+								{
+									"key": "legajo",
+									"value": "112"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ovni Listado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/Listado.php?",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"Listado.php"
+							],
+							"query": [
+								{
+									"key": "opcion",
+									"value": "listado",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ovni Agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "obj_json",
+									"value": "{\"tipo\":\"octopus\",\"velocidad\":500,\"planetaOrigen\":\"melmac\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/AgregarOvniSinFoto.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"AgregarOvniSinFoto.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ovni Verificar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "obj_json",
+									"value": "{\"tipo\":\"octopus\",\"velocidad\":500,\"planetaOrigen\":\"melmac\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/VerificarOvni.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"VerificarOvni.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ovni Agregar con Foto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tipo",
+									"value": "Protoss",
+									"type": "text"
+								},
+								{
+									"key": "velocidad",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "planeta",
+									"value": "proteus",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/galva/OneDrive/Imágenes/aliens/protoss.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/AgregarOvni.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"AgregarOvni.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ovni Modificar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tipo",
+									"value": "tresojos",
+									"type": "text"
+								},
+								{
+									"key": "velocidad",
+									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "planeta",
+									"value": "saturnoM",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/galva/OneDrive/Imágenes/aliens.jpg"
+								},
+								{
+									"key": "id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/ModificarOvni.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"ModificarOvni.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Ovni GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/EliminarOvni.php?id=10",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"EliminarOvni.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Ovni POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "19",
+									"type": "text"
+								},
+								{
+									"key": "accion",
+									"value": "borrar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/EliminarOvni.php?",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"EliminarOvni.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "accion",
+									"value": "borrar",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Ovni GET sin parametros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/EliminarOvni.php?",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"EliminarOvni.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "accion",
+									"value": "borrar",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Borrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/1PARCIAL2019PROG/MostrarBorrados.php",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"1PARCIAL2019PROG",
+								"MostrarBorrados.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
